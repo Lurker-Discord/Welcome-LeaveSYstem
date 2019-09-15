@@ -1,0 +1,127 @@
+{
+  "name": "JoinMessage",
+  "temp": "member",
+  "event-type": "6",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stop",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "stop",
+      "name": "Store Server Data"
+    },
+    {
+      "storage": "1",
+      "varName": "stop",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stops",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "stops",
+      "name": "Store Server Data"
+    },
+    {
+      "storage": "1",
+      "varName": "stops",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "IDChannelWWWW",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "ID",
+      "name": "Store Server Data"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"ID\")}",
+      "storage": "1",
+      "varName": "fgdg",
+      "name": "Find Channel"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ID",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "2",
+      "storage": "1",
+      "varName2": "usern",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "12",
+      "storage": "1",
+      "varName2": "av",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "User Joined",
+      "author": "",
+      "color": "RANDOM",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"av\")}",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "emb1313",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb1313",
+      "message": "${tempVars(\"member\")} (${tempVars(\"usern\")} , ${tempVars(\"ID\")}) has joined the server",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "emb1313",
+      "channel": "5",
+      "varName2": "fgdg",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "oaoMZ"
+}
